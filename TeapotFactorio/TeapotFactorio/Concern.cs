@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,6 @@ namespace TeapotFactorio
         private void AddBuilding(Building building)
         {
             buildings.Add(building);
-            building.StartProduction(wareHouse);
         }
 
         public void CreateNewBuilding() //Мега Костиль

@@ -57,11 +57,20 @@ namespace TeapotFactorio.Buildings
                     sb.AppendLine("---------------------");
                     return sb.ToString();
                 }
+                ElectroEnergy energyTemplate = new ElectroEnergy();
+                ElectroEnergyUsage energyUsageTemplate = new ElectroEnergyUsage();
                 foreach (var kvp in resources)
                 {
+                    if (kvp.Key == energyUsageTemplate.GetName() || kvp.Key == energyTemplate.GetName())
+                    { continue; }
                     sb.AppendLine($"{kvp.Key}: {kvp.Value}");
                 }
                 sb.AppendLine("---------------------");
+                if (resources.ContainsKey(energyTemplate.GetName()))
+                {
+                    if (resources.ContainsKey(energyUsageTemplate.GetName()))
+                        sb.AppendLine($"Споживання електроєнергії: {resources[energyUsageTemplate.GetName()]}/{resources[energyTemplate.GetName()]} кВт");
+                }
                 return sb.ToString();
             }
         }

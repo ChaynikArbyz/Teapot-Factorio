@@ -9,9 +9,9 @@ namespace TeapotFactorio.Buildings
 {
     internal class OilRefinery : Building
     {
-        public OilRefinery(WareHouse wareHouse) : base("Нафтопереробний завод", new Recipe(new Dictionary<Resource, double> { { new Oil(), 10 } }, new Dictionary<Resource, double> { { new Fuel(), 8 }, { new Plastic(), 2 } }), 11000)
+        public OilRefinery(WareHouse wareHouse) : base(wareHouse, "Нафтопереробний завод", new Recipe(new Dictionary<Resource, double> { { new Oil(), 10 } }, new Dictionary<Resource, double> { { new Fuel(), 8 }, { new Plastic(), 2 } }), 11000, 5)
         {
-            StartProduction(wareHouse);
+            StartProduction();
         }
         public override string ToString()
         {

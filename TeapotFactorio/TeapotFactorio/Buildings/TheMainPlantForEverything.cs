@@ -12,9 +12,9 @@ namespace TeapotFactorio.Buildings
     internal class TheMainPlantForEverything : Building
     {
         private Recipes AdvancedRecipes = new Recipes();
-        public TheMainPlantForEverything(WareHouse wareHouse) : base("Головний завод для всього", new Recipe(new Dictionary<Resource, double> { { new ElectroEnergy(), 5 }, { new Iron(), 2 }, { new Cooper(), 1 }, { new Plastic(), 3 } }, new Dictionary<Resource, double> { { new Teapot(), 1 } }), 25000)
+        public TheMainPlantForEverything(WareHouse wareHouse) : base(wareHouse,"Головний завод для всього", new Recipe(new Dictionary<Resource, double> { { new ElectroEnergy(), 5 }, { new Iron(), 2 }, { new Cooper(), 1 }, { new Plastic(), 3 } }, new Dictionary<Resource, double> { { new Teapot(), 1 } }), 25000, 10)
         {
-            StartProduction(wareHouse);
+            StartProduction();
             AdvancedRecipes.AddRecipe("Чайник", new Recipe(new Dictionary<Resource, double> { { new ElectroEnergy(), 5 }, { new Iron(), 2 }, { new Cooper(), 1 }, { new Plastic(), 3 } }, new Dictionary<Resource, double> { { new Teapot(), 1 } }));
             AdvancedRecipes.AddRecipe("Чашка", new Recipe(new Dictionary<Resource, double> { { new Iron(), 2 }, { new Plastic(), 5 } }, new Dictionary<Resource, double> { { new Cup(), 1 } }));
             AdvancedRecipes.AddRecipe("Годинник", new Recipe(new Dictionary<Resource, double> { { new Iron(), 3 }, { new Plastic(), 4 }, { new ElectroEnergy(), 3 }, { new Cooper(), 1 } }, new Dictionary<Resource, double> { { new Clock(), 1 } }));

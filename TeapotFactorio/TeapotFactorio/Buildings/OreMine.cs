@@ -9,9 +9,9 @@ namespace TeapotFactorio.Buildings
 {
     internal class OreMine : Building
     {
-        public OreMine(WareHouse wareHouse) : base("Рудна шахта", new Recipe(new Dictionary<Resource, double> { }, new Dictionary<Resource, double> { { new Ore(), 2 } }),8000)
+        public OreMine(WareHouse wareHouse) : base(wareHouse,"Рудна шахта", new Recipe(new Dictionary<Resource, double> { }, new Dictionary<Resource, double> { { new Ore(), 2 } }),8000, 0)
         {
-            StartProduction(wareHouse);
+            StartProduction();
         }
         public override string ToString()
         {

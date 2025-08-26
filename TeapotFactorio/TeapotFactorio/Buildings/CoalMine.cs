@@ -9,9 +9,9 @@ namespace TeapotFactorio.Buildings
 {
     internal class CoalMine : Building
     {
-        public CoalMine(WareHouse wareHouse) : base("Вугільна шахта", new Recipe(new Dictionary<Resource, double> { }, new Dictionary<Resource, double> { { new Coal(), 1 } }), 8000)
+        public CoalMine(WareHouse wareHouse) : base(wareHouse,"Вугільна шахта", new Recipe(new Dictionary<Resource, double> { }, new Dictionary<Resource, double> { { new Coal(), 1 } }), 8000, 0)
         {
-            StartProduction(wareHouse);
+            StartProduction();
         }
         public override string ToString()
         {
