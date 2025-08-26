@@ -72,6 +72,7 @@ namespace TeapotFactorio.Buildings
             {
                 if (!wareHouse.resources.ContainsKey(input.Key.GetName()) || wareHouse.resources[input.Key.GetName()] < input.Value)
                 {
+
                     ColorText.WriteColorLine($"Недостатньо ресурсів для виробництва {name}", ConsoleColor.DarkRed);
                     return;
                 }

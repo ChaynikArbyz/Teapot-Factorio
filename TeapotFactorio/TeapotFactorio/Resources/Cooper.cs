@@ -8,7 +8,7 @@ namespace TeapotFactorio.Resources
 {
     internal class Cooper : Resource
     {
-        public Cooper() : base("Мідь")
+        public Cooper() : base("Мідь", 15)
         {
         }
     }

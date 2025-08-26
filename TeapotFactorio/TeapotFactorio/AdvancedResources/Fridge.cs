@@ -9,7 +9,7 @@ namespace TeapotFactorio.AdvancedResources
 {
     internal class Fridge : Resource
     {
-        public Fridge() : base("Холодильник")
+        public Fridge() : base("Холодильник", 90)
         {
         }
     }

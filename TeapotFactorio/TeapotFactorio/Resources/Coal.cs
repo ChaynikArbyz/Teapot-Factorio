@@ -8,7 +8,7 @@ namespace TeapotFactorio.Resources
 {
     internal class Coal : Resource
     {
-        public Coal() : base("Вугілля")
+        public Coal() : base("Вугілля", 10)
         {
         }
     }

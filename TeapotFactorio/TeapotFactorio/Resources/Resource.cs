@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace TeapotFactorio.Resources
 {
-    internal abstract class Resource
+    internal abstract class Resource : ISellable
     {
         protected string name;
+        protected double price;
+        public double GetPrice() => price;
 
-        public Resource(string name)
+        public Resource(string name, double price)
         {
             this.name = name;
+            this.price = price;
         }
         public string GetName() => name;
     }

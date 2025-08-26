@@ -8,7 +8,7 @@ namespace TeapotFactorio.Resources
 {
     internal class Plastic : Resource
     {
-        public Plastic() : base("Пластик")
+        public Plastic() : base("Пластик", 13)
         {
         }
     }

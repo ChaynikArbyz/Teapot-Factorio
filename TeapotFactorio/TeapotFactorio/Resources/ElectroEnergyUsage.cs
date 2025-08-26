@@ -9,7 +9,7 @@ namespace TeapotFactorio.Resources
     internal class ElectroEnergyUsage : Resource
     {
 
-        public ElectroEnergyUsage() : base("Електроенергія Використовується")
+        public ElectroEnergyUsage() : base("Електроенергія Використовується", -1)
         {
         }
     }

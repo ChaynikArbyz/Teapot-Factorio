@@ -9,7 +9,7 @@ namespace TeapotFactorio.AdvancedResources
 {
     internal class Socket : Resource
     {
-        public Socket() : base("Розетка")
+        public Socket() : base("Розетка", 70)
         {
         }
     }

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Threading.Tasks;
 using ColorTextService;
-using TeapotFactorio.AdvancedResources;
 using TeapotFactorio.Buildings;
-using TeapotFactorio.Resources;
 
 namespace TeapotFactorio
 {
@@ -15,10 +10,17 @@ namespace TeapotFactorio
     {
         static void Main(string[] args)
         {
+
+
+            //без автопокупки і автопродажу, із-за структури коду, якщо автопокупку ще можна зробити з доп костилями то для автопродажу треба міняти весь код з таймерів на такти
+
+
+
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
             Concern concern = new Concern("Фабрика великих чайників");
+            MarketPlace marketPlace = new MarketPlace(concern);
 
             bool isRunning = true;
             bool isFalseInput = false;
@@ -34,12 +36,14 @@ namespace TeapotFactorio
                 }
 
                 ColorText.WriteColorLine("-< Teapot Factorio >-\n", ConsoleColor.Red);
-                Console.WriteLine(concern.wareHouse.ToString());
+                Console.Write(concern.wareHouse.ToString());
+                ColorText.WriteColorLine("Гроші: " + concern.cash + "$\n", ConsoleColor.DarkYellow);
                 Console.WriteLine("Виберіть дію:");
                 Console.WriteLine("1. Створити нове виробництво");
                 Console.WriteLine("2. Список всіх виробництв");
                 Console.WriteLine("3. Змінити головний продукт виготовлення");
-                Console.WriteLine("4. Оновити меню");
+                Console.WriteLine("4. Маркетплейс");
+                Console.WriteLine("5. Оновити меню");
                 Console.WriteLine("esc. Вийти");
 
                 switch (Console.ReadKey(true).Key)
@@ -72,6 +76,9 @@ namespace TeapotFactorio
                         Console.ReadKey(true);
                         break;
                     case ConsoleKey.D4:
+                        marketPlace.ShowMarketWindow();
+                        break;
+                    case ConsoleKey.D5:
                         break;
                     case ConsoleKey.Escape:
                         isRunning = false;

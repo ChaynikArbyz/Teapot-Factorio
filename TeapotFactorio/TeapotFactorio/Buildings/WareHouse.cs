@@ -70,6 +70,8 @@ namespace TeapotFactorio.Buildings
                 {
                     if (resources.ContainsKey(energyUsageTemplate.GetName()))
                         sb.AppendLine($"Споживання електроєнергії: {resources[energyUsageTemplate.GetName()]}/{resources[energyTemplate.GetName()]} кВт");
+                    else
+                        sb.AppendLine($"Споживання електроєнергії: 0/{resources[energyTemplate.GetName()]} кВт");
                 }
                 return sb.ToString();
             }

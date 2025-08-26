@@ -8,7 +8,7 @@ namespace TeapotFactorio.Resources
 {
     internal class Iron : Resource
     {
-        public Iron() : base("Залізо")
+        public Iron() : base("Залізо", 17.5)
         {
         }
     }

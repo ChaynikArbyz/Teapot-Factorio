@@ -8,7 +8,7 @@ namespace TeapotFactorio.Resources
 {
     internal class Fuel : Resource
     {
-        public Fuel() : base("Паливо")
+        public Fuel() : base("Паливо", 20)
         {
         }
     }

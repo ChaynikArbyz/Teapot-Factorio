@@ -8,7 +8,8 @@ namespace TeapotFactorio.Resources
 {
     internal class Lead : Resource
     {
-        public Lead() : base("Свинець")
+        public Lead() : base("Свинець", 16
+            )
         {
         }
     }

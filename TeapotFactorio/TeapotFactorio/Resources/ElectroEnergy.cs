@@ -9,7 +9,7 @@ namespace TeapotFactorio.Resources
     internal class ElectroEnergy : Resource
     {
 
-        public ElectroEnergy() : base("Електроенергія")
+        public ElectroEnergy() : base("Електроенергія", 20)
         {
         }
     }

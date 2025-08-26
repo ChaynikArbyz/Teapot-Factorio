@@ -9,7 +9,7 @@ namespace TeapotFactorio.AdvancedResources
 {
     internal class Clock : Resource
     {
-        public Clock() : base("Годинник")
+        public Clock() : base("Годинник", 70)
         {
         }
     }

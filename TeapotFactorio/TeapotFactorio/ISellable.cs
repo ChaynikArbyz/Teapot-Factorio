@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeapotFactorio.Resources
+namespace TeapotFactorio
 {
-    internal class Ore : Resource
+    internal interface ISellable
     {
-        public Ore() : base("Руда", 20)
-        {
-        }
+        double GetPrice();
+        string GetName();
     }
 }

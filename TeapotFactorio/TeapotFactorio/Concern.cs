@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ColorTextService;
 using TeapotFactorio.Buildings;
+using TeapotFactorio.Resources;
 
 namespace TeapotFactorio
 {
@@ -13,6 +14,12 @@ namespace TeapotFactorio
     {
 
         public string name;
+        public double cash { get; private set; } = 0;
+        public void AddMoney(double amount) 
+        {
+            if (amount  + cash < 0) { return; }
+            cash += amount;
+        }
         public WareHouse wareHouse { get; private set; }
         public List<Building> buildings { get; private set; }
 

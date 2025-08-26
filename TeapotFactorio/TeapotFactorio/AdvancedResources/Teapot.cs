@@ -9,7 +9,7 @@ namespace TeapotFactorio.AdvancedResources
 {
     internal class Teapot : Resource
     {
-        public Teapot() : base("Чайник")
+        public Teapot() : base("Чайник", 120)
         {
         }
     }

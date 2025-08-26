@@ -59,6 +59,10 @@
     <Compile Include="Buildings\WareHouse.cs" />
     <Compile Include="ColorText.cs" />
     <Compile Include="Concern.cs" />
+    <Compile Include="ISellable.cs" />
+    <Compile Include="ITradeable.cs" />
+    <Compile Include="MarketPlace.cs" />
+    <Compile Include="MarketResource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe.cs" />
